@@ -26,8 +26,18 @@ def main() -> None:
     # Parse options and put them in the table args
     args = argparser.parse_args()
 
-    # With all the options handled, we just need to do the real work
-    # FIXME: put your code here
+    Lines = args.bed.readlines()
+    table = Table()
+    for line in Lines:    
+        BedLine = parse_line(line)
+        table.add_line(BedLine)
+        #print_line(BedLine, args.outfile)
+    Lines = args.query.readlines()
+    for line in Lines:
+        lst = line.split(" ")
+        chr = table.get_chrom(lst[0])
+        print_line(table.get_chrom('chr1'), args.outfile)
+    
 
 
 if __name__ == '__main__':
