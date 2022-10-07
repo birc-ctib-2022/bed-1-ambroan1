@@ -26,21 +26,10 @@ def main() -> None:
 
     # Parse options and put them in the table args
     args = argparser.parse_args()
-
-    # With all the options handled, we just need to do the real work
-    # FIXME: put your code here
-    
-    input = args.infile
-    output = args.outfile
-
-    Lines = input.readlines()
+    Lines = args.infile.readlines()
     for line in Lines:    
-        #BedLine = parse_line(line: str)
         BedLine = parse_line(line)
-        #print_line(line: BedLine, f: TextIO)
-        print_line(BedLine, output)
-
-
+        print_line(BedLine, args.outfile)
 
 if __name__ == '__main__':
     main()
