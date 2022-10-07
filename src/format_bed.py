@@ -30,13 +30,15 @@ def main() -> None:
     # With all the options handled, we just need to do the real work
     # FIXME: put your code here
     
+    input = args.infile
+    output = args.outfile
 
-    Lines = (args[0]).readlines()
+    Lines = input.readlines()
     for line in Lines:    
         #BedLine = parse_line(line: str)
         BedLine = parse_line(line)
         #print_line(line: BedLine, f: TextIO)
-        print_line(BedLine, args[1])
+        print_line(BedLine, output)
 
 
 
