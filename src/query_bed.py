@@ -26,18 +26,18 @@ def main() -> None:
     # Parse options and put them in the table args
     args = argparser.parse_args()
 
-    Lines = args.bed.readlines()
+    LinesBed = args.bed.readlines()
     table = Table()
-    for line in Lines:    
-        BedLine = parse_line(line)
-        table.add_line(BedLine)
-        #print_line(BedLine, args.outfile)
-    Lines = args.query.readlines()
-    for line in Lines:
-        lst = line.split(" ")
-        chr = table.get_chrom(lst[0])
-        print_line(table.get_chrom(chr), args.output)
-    
+    for line in LinesBed:    
+        bed_line = parse_line(line)
+        table.add_line(bed_line)
+    LinesQuery = args.query.readlines()
+    for line in LinesQuery:
+        lst = line.split("\t")
+        for feature in table.get_chrom(lst[0]):
+            if feature.chrom_start >= int(lst[1]) and feature.chrom_end < int(lst[2]):
+                print_line(feature, args.outfile)    
+    args.outfile.close()
 
 
 if __name__ == '__main__':

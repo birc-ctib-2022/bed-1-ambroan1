@@ -3,8 +3,10 @@ from bed import (
 )
 from query import Table
 
+from query_bed import main
+
 def test_query_bed() -> None:
     "Testing query bed."
-
-    assert(query_bed("input.bed","output.bed","query-1.txt") == "expected-1.txt")
+    main("large.bed","query-1.txt","output-1.txt")
+    assert("output-1.txt" == "expected-1.txt")
 
