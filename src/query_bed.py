@@ -36,7 +36,7 @@ def main() -> None:
     for line in Lines:
         lst = line.split(" ")
         chr = table.get_chrom(lst[0])
-        print_line(table.get_chrom('chr1'), args.outfile)
+        print_line(table.get_chrom(chr), args.output)
     
 
 
