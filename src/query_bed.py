@@ -36,9 +36,9 @@ def main() -> None:
         lst = line.split("\t")
         for feature in table.get_chrom(lst[0]):
             if feature.chrom_start >= int(lst[1]) and feature.chrom_end < int(lst[2]):
-                print_line(feature, args.outfile)    
+                print_line(feature, args.output)    
                 
-    args.outfile.close()
+    args.output.close()
     
 
 if __name__ == '__main__':
