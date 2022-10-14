@@ -65,7 +65,6 @@ chrom3	467	468	Feature-827
 chrom3	529	530	Feature-874
 chrom3	666	667	Feature-888
 chrom3	641	642	Feature-933
-chrom3	811	812	Feature-935
 chrom3	537	538	Feature-954
 chrom3	489	490	Feature-958
 chrom3	682	683	Feature-964
@@ -609,7 +608,6 @@ chrom0	82	83	Feature-463
 chrom0	491	492	Feature-470
 chrom0	93	94	Feature-471
 chrom0	225	226	Feature-491
-chrom0	624	625	Feature-500
 chrom0	511	512	Feature-522
 chrom0	109	110	Feature-531
 chrom0	251	252	Feature-538
@@ -674,7 +672,6 @@ chrom4	849	850	Feature-303
 chrom4	768	769	Feature-315
 chrom4	670	671	Feature-346
 chrom4	702	703	Feature-347
-chrom4	854	855	Feature-353
 chrom4	811	812	Feature-420
 chrom4	782	783	Feature-431
 chrom4	822	823	Feature-454
@@ -750,7 +747,6 @@ chrom4	570	571	Feature-748
 chrom4	676	677	Feature-750
 chrom4	912	913	Feature-773
 chrom4	821	822	Feature-800
-chrom4	937	938	Feature-830
 chrom4	800	801	Feature-840
 chrom4	565	566	Feature-843
 chrom4	782	783	Feature-846
@@ -2056,7 +2052,6 @@ chrom1	471	472	Feature-400
 chrom1	402	403	Feature-416
 chrom1	609	610	Feature-432
 chrom1	213	214	Feature-433
-chrom1	614	615	Feature-434
 chrom1	418	419	Feature-468
 chrom1	504	505	Feature-477
 chrom1	304	305	Feature-497
