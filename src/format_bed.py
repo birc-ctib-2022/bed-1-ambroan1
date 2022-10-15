@@ -26,10 +26,9 @@ def main() -> None:
 
     # Parse options and put them in the table args
     args = argparser.parse_args()
-    Lines = args.infile.readlines()
-    for line in Lines:    
-        BedLine = parse_line(line)
-        print_line(BedLine, args.outfile)
+    for line in args.infile:    
+        bed_line = parse_line(line)
+        print_line(bed_line, args.outfile)
 
 if __name__ == '__main__':
     main()

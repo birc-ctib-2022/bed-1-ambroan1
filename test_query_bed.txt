@@ -1,0 +1,34 @@
+from bed import (
+    parse_line, print_line
+)
+from query import Table
+
+from query_bed import main
+
+def test_query_bed() - None
+    Testing query bed.
+    main() # large.bed,query-1.txt,output-1.txt
+    argparser = argparse.ArgumentParser(
+        description=Extract regions from a BED file)
+    argparser.add_argument('bed', type=argparse.FileType('r'))
+    argparser.add_argument('query', type=argparse.FileType('r'))
+    argparser.add_argument('expected', type=argparse.FileType('r'))
+    argparser.add_argument('outfile', type=argparse.FileType('r'))
+    # 'outfile' is either provided as a file name or we use stdout
+
+    # Parse options and put them in the table args
+    args = argparser.parse_args()
+
+    LinesOut = args.outfile.readlines()
+    LinesExpected = args.expected.readlines()
+    status = True
+    for i in range(len(LinesOut))
+
+        out_line = parse_line(LinesOut(i))
+        expected_line = parse_line(LinesExpected(i))
+
+        if out_line != expected_line
+            status = False
+    print(status)
+            
+
