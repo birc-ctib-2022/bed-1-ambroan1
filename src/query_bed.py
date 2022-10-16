@@ -36,11 +36,11 @@ def main() -> None:
 
     for line in args.query: # read query file
         lst = line.split("\t")
-        feature = table.get_chrom(lst[0]) 
-        for bed_line in feature:
+        chrom = table.get_chrom(lst[0]) 
+        for bed_line in chrom:
             if bed_line.chrom_start >= int(lst[1]) and bed_line.chrom_end <= int(lst[2]): 
                 print_line(bed_line, args.outfile)
-                
+
     #args.outfile.close()
 
 

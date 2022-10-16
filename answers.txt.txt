@@ -1,0 +1,26 @@
+1. How does your method for extracting features work?
+
+First, we check if the bed file contains the chrom from the  query file. 
+If  it does, we procees to choose just the lines from bed file that are between the start and end position,
+according to line in query file. Then, we print those lines to our outfile.
+
+
+
+2. What is the complexity of the algorithm, as a function of the size of the two input files?
+When you answer this, you need to know that you can get the list of chromosomse from a query.Table in constant time, 
+but it does, of course, take longer to run through all the lines in it.
+
+First, we iterate through the lines of bed file, to extract them to the table O(n). 
+Then, we iterate through all the lines in the query table O(m), there are three actions in the loop :
+split the line O(1), get_chrom O(1) and then we run through the every line in bed to print the lines that agree with out condition O(n). 
+This means, our overall complexity is O(n*m)
+
+
+3. Did you, at any point, exploit that our features are on single nucleotides and not larger regions?
+
+The algorithm does not make assumptions about single nucleotides. 
+
+
+
+4. If you did, what would it take to handle general regions?
+-
